@@ -131,7 +131,7 @@ public class WebService extends AppCompatActivity {
             });
         } else {
 
-            Toast.makeText(this, "Please enter the Latitude and Longitude correctly!",
+            Toast.makeText(this, "Please enter correct coordinates!",
                     Toast.LENGTH_SHORT).show();
         }
     }
@@ -146,8 +146,8 @@ public class WebService extends AppCompatActivity {
     public void onBackPressed() {
         new AlertDialog.Builder(this)
                 .setIcon(android.R.drawable.ic_dialog_alert)
-                .setTitle("Closing Activity")
-                .setMessage("Are you sure you want to close this activity?")
+                .setTitle("Exiting Activity")
+                .setMessage("Are you sure you want to exit?")
                 .setPositiveButton("Yes", new DialogInterface.OnClickListener()
                 {
                     @Override
