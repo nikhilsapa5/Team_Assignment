@@ -5,6 +5,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import com.google.android.material.snackbar.Snackbar;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -15,9 +17,22 @@ public class MainActivity extends AppCompatActivity {
 
     public void onClick(View view) {
         int theId = view.getId();
-        if(theId == R.id.atYourWebService) {
+        if (theId == R.id.atYourWebService) {
             Intent intent = new Intent(this, WebService.class);
             startActivity(intent);
         }
+        if (theId == R.id.sendSticker) {
+            Intent intent = new Intent(this, LoginActivity.class);
+            startActivity(intent);
+        }
+        if (theId == R.id.aboutMe) {
+            snakeInfo();
+        }
+    }
+
+    private void snakeInfo() {
+        String myInfo = "We are group 55 consisting of Nikhil Sapa, Parker Hentz, Karan Satwani.";
+        final Snackbar snackbar = Snackbar.make(findViewById(R.id.rootLayout), myInfo, Snackbar.LENGTH_LONG);
+        snackbar.show();
     }
 }
