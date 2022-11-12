@@ -8,7 +8,6 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ProgressBar;
@@ -29,9 +28,9 @@ public class LoginActivity extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        etLogin = findViewById(R.id.editTxt_login);
-        loadingCircle = findViewById(R.id.loadingCircle);
-        findViewById(R.id.btn_login).setOnClickListener(new View.OnClickListener() {
+        etLogin = findViewById(R.id.editTextLogin);
+        loadingCircle = findViewById(R.id.loadCircle);
+        findViewById(R.id.buttonLogin).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 login();

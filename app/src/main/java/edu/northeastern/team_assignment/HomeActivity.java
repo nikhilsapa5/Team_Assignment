@@ -10,7 +10,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
@@ -37,7 +36,7 @@ import com.google.firebase.database.annotations.Nullable;
 import java.util.ArrayList;
 import java.util.List;
 
-import edu.northeastern.team_assignment.Chat.SendActivity;
+import edu.northeastern.team_assignment.chatDirectory.SendActivity;
 
 public class HomeActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
@@ -54,7 +53,7 @@ public class HomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login_success);
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
-        recyclerView = findViewById(R.id.all_users_recycle_view);
+        recyclerView = findViewById(R.id.AllUserRecycleView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         adapter = new UserAdapter(this,list);
         adapter.setOnItemClickListener(new UserAdapter.OnItemClickListener() {

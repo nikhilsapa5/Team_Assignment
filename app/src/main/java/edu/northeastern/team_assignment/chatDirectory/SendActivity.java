@@ -1,4 +1,4 @@
-package edu.northeastern.team_assignment.Chat;
+package edu.northeastern.team_assignment.chatDirectory;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -58,17 +58,17 @@ public class SendActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_send);
-        hh_tv = findViewById(R.id.count_hh);
-        roll_tv = findViewById(R.id.count_roll);
-        anger_tv = findViewById(R.id.count_anger);
-        smile_tv = findViewById(R.id.count_smile);
-        wink_tv = findViewById(R.id.count_wink);
+        hh_tv = findViewById(R.id.countHH);
+        roll_tv = findViewById(R.id.countRoll);
+        anger_tv = findViewById(R.id.countAnger);
+        smile_tv = findViewById(R.id.countSmile);
+        wink_tv = findViewById(R.id.countWink);
 
-        hh_iv = findViewById(R.id.ic_hh);
-        roll_iv = findViewById(R.id.ic_roll);
-        smile_iv = findViewById(R.id.ic_smile);
-        wink_iv = findViewById(R.id.ic_wink);
-        anger_iv = findViewById(R.id.ic_anger);
+        hh_iv = findViewById(R.id.icHH);
+        roll_iv = findViewById(R.id.icRoll);
+        smile_iv = findViewById(R.id.icSmile);
+        wink_iv = findViewById(R.id.icWink);
+        anger_iv = findViewById(R.id.icAnger);
 
         findViewById(R.id.imageBack).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -90,7 +90,7 @@ public class SendActivity extends AppCompatActivity implements View.OnClickListe
         senderName = sharedPreferences.getString("name", "");
 
         // init recycleview
-        recyclerView = findViewById(R.id.recycleView_send);
+        recyclerView = findViewById(R.id.recycleViewSend);
         sendAdapter = new SendAdapter(messageList, this);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(linearLayoutManager);
@@ -98,7 +98,7 @@ public class SendActivity extends AppCompatActivity implements View.OnClickListe
 
         // send click
         transferFromSenderToReceiver(senderName, receiverName);
-        findViewById(R.id.layoutsend).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.layoutSend).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 sendStickerToDB(chosenSticker);
@@ -173,19 +173,19 @@ public class SendActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View view) {
         initSelect();
         int theId = view.getId();
-        if(theId == R.id.ic_hh){
+        if(theId == R.id.icHH){
             chosenSticker = "hh";
             hh_iv.setBackgroundColor(getColor(R.color.white));
-        }else if(theId == R.id.ic_anger){
+        }else if(theId == R.id.icAnger){
             chosenSticker = "anger";
             anger_iv.setBackgroundColor(getColor(R.color.white));
-        }else if(theId == R.id.ic_roll){
+        }else if(theId == R.id.icRoll){
             chosenSticker = "roll";
             roll_iv.setBackgroundColor(getColor(R.color.white));
-        }else if(theId == R.id.ic_wink){
+        }else if(theId == R.id.icWink){
             chosenSticker = "wink";
             wink_iv.setBackgroundColor(getColor(R.color.white));
-        }else if(theId == R.id.ic_smile){
+        }else if(theId == R.id.icSmile){
             chosenSticker = "smile";
             smile_iv.setBackgroundColor(getColor(R.color.white));
         }

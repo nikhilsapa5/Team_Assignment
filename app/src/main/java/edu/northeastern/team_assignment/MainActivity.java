@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void snakeInfo() {
         String myInfo = "We are group 55 consisting of Nikhil Sapa, Parker Hentz, Karan Satwani.";
-        final Snackbar snackbar = Snackbar.make(findViewById(R.id.rootLayout), myInfo, Snackbar.LENGTH_LONG);
+        final Snackbar snackbar = Snackbar.make(findViewById(R.id.parentLayout), myInfo, Snackbar.LENGTH_LONG);
         snackbar.show();
     }
 }

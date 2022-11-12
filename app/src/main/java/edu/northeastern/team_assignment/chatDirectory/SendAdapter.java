@@ -1,4 +1,4 @@
-package edu.northeastern.team_assignment.Chat;
+package edu.northeastern.team_assignment.chatDirectory;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -84,8 +84,8 @@ public class SendAdapter extends RecyclerView.Adapter<SendAdapter.ViewHolder> {
         ImageView sendImage;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            senderName = itemView.findViewById(R.id.senderName);
-            sendTime = itemView.findViewById(R.id.senderTime);
+            senderName = itemView.findViewById(R.id.sendName);
+            sendTime = itemView.findViewById(R.id.sendTime);
             sendImage = itemView.findViewById(R.id.sendImage);
         }
     }
