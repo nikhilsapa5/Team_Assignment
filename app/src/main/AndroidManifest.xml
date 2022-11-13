@@ -16,6 +16,11 @@
         android:theme="@style/Theme.Team29Project"
         tools:targetApi="31">
         <activity
+            android:name=".test_karan"
+            android:exported="false"
+            android:label="@string/title_activity_test_karan"
+            android:theme="@style/Theme.Team29Project.NoActionBar" />
+        <activity
             android:name=".chatDirectory.SendActivity"
             android:exported="false" />
         <activity
